@@ -261,24 +261,76 @@
         console.log(output);
     }
 
+    // The editor has two console.logs to help you see what is happening. Check the console as you code to see how it changes. Declare a local variable myVar inside myLocalScope and run the tests.
+    // Note: The console will still display ReferenceError: myVar is not defined, but this will not cause the tests to fail.
 
+    function myLocalScope() {
+        let myVar = "Hi";
+        console.log('inside myLocalScope',myVar);
+    }
+    myLocalScope();
+    // Run and check the console
+    // myVar is not defined outside of myLocalScope
+    console.log('outside myLocalScope', myVar);
 
+    // Add a local variable to myOutfit function to override the value of outerWear with the string sweater.
+    // Setup
+        const outerWear = "T-Shirt";
+        function myOutfit() {
+            let outerWear = "sweater";
+            return outerWear
+        }
+        myOutfit();
 
+    // Create a function addFive without any arguments. This function adds 5 to the sum variable, but its returned value is undefined.
+        // Setup
+            let sum = 0;
+            function addThree() {
+                sum = sum + 3;
+            }
+            function addFive() {
+                sum = sum + 5;
+            }
+        addThree();
+        addFive();
 
+    // Call the processArg function with an argument of 7 and assign its return value to the variable processed.
+    // Setup
+        let processed = 0;
+        function processArg(num) {
+            return (num + 3) / 5;
+        }
+        processed = processArg(7);
 
+    // Write a function nextInLine which takes an array (arr) and a number (item) as arguments.
+    // Add the number to the end of the array, then remove the first element of the array.
+    // The nextInLine function should then return the element that was removed.
 
+        function nextInLine(arr, item) {
+        // Only change code below this line
+        arr.push(item);
+        var removed = arr.shift();
+        return removed;
+        // Only change code above this line
+    }
+    // Setup
+    const testArr = [1, 2, 3, 4, 5];
+        // Display code
+    console.log("Before: " + JSON.stringify(testArr));
+    console.log(nextInLine(testArr, 6));
+    console.log("After: " + JSON.stringify(testArr));
 
-
-
-
-
-
-
-
-
-
-
-
+    // Modify the welcomeToBooleans function so that it returns true instead of false when the run button is clicked.
+        function welcomeToBooleans() {
+            return true
+        }
+    // Create an if statement inside the function to return Yes, that was true if the parameter wasThatTrue is true and return No, that was false otherwise.
+        function trueOrFalse(wasThatTrue){
+            if(wasThatTrue === true){
+                return "Yes, that was true";
+            }
+                return "No, that was false";
+        }
 
 
 
