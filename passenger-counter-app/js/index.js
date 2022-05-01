@@ -37,13 +37,26 @@ lapsIncrement();
 
 let countEl = document.getElementById("count-el");
 let count = 0;
-    function incrementPress() {
+    function increment() {
         count += 1;
         countEl.innerText = count;
     }
 
+    function save() {
+        console.log(count);
+    }
 
+let message = "You have three new notifications";
+console.log(message);
+let username = "Thor";
+console.log(username);
 
+let messageToUser = message + ", " + username + "!";
+console.log(messageToUser);
 
+let userName = "Carlos";
+let greeting = "Hi, my name is ";
+let myGreeting = greeting + userName;
+console.log(myGreeting);
 
 
